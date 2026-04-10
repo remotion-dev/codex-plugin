@@ -25,6 +25,10 @@ skills/
     rules/*.md
 ```
 
+## Contributing
+
+This repository is a mirror of [`packages/codex-plugin`](https://github.com/remotion-dev/remotion/tree/main/packages/codex-plugin) in the [Remotion monorepo](https://github.com/remotion-dev/remotion), which is the source of truth. Please send contributions there.
+
 ## Skills included
 
 - **remotion** — Best practices for video creation with Remotion and React. Covers project setup, animations, timing, audio, captions, 3D, transitions, charts, text effects, fonts, and 30+ more topics.

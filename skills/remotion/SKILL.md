@@ -282,6 +282,10 @@ See [rules/light-leaks.md](rules/light-leaks.md) for light leak overlay effects 
 
 See [rules/lottie.md](rules/lottie.md) for embedding Lottie animations in Remotion.
 
+## HTML in canvas
+
+See [rules/html-in-canvas.md](rules/html-in-canvas.md) if you need to render HTML into a `<canvas>` to apply 2D or WebGL effects via `<HtmlInCanvas>`.
+
 ## Measuring DOM nodes
 
 See [rules/measuring-dom-nodes.md](rules/measuring-dom-nodes.md) for measuring DOM element dimensions in Remotion.
@@ -328,7 +332,8 @@ See [rules/parameters.md](rules/parameters.md) for making a composition parametr
 
 ## Maps
 
-See [rules/maps.md](rules/maps.md) for adding a map using Mapbox and animating it.
+For simple maps with little flyovers, consider just using a static images for maps.
+For complex maps with many flyovers, consider using Mapbox and animating it. Instructions: [rules/mapbox.md](rules/mapbox.md)
 
 ## Voiceover
 

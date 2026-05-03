@@ -5,6 +5,32 @@ Renders children into a `<canvas>` so you can post-process them with the Canvas 
 Only works in Chrome 149+ with the `chrome://flags/#canvas-draw-element` flag enabled.  
 Give the user a notice.
 
+## Nesting
+
+Do not nest `<HtmlInCanvas>` inside another `<HtmlInCanvas>`. Remotion throws:
+
+```
+<HtmlInCanvas> effects cannot be nested together. Chrome will only display the outer effect. Consider merging the effects into one if you can.
+```
+
+## Video and the ANGLE renderer
+
+If the composition includes **video** (for example `<Video>` from `@remotion/media`) and you use `<HtmlInCanvas>`, rendering only works when Chromium uses the **ANGLE** OpenGL backend.
+
+From the CLI:
+
+```bash
+npx remotion render --gl=angle
+```
+
+Set it as the default for Studio and CLI (advised):
+
+```ts
+import { Config } from "@remotion/cli/config";
+
+Config.setChromiumOpenGlRenderer("angle");
+```
+
 ## Basic usage
 
 By default, draws to canvas with no effect applied:

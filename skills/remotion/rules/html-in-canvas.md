@@ -13,9 +13,9 @@ Do not nest `<HtmlInCanvas>` inside another `<HtmlInCanvas>`. Remotion throws:
 <HtmlInCanvas> effects cannot be nested together. Chrome will only display the outer effect. Consider merging the effects into one if you can.
 ```
 
-## Video and the ANGLE renderer
+## Enabling WebGL during renders
 
-If the composition includes **video** (for example `<Video>` from `@remotion/media`) and you use `<HtmlInCanvas>`, rendering only works when Chromium uses the **ANGLE** OpenGL backend.
+If you make use of WebGL during renders, you need to enable it:
 
 From the CLI:
 

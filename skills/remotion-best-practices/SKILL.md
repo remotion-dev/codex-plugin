@@ -37,6 +37,10 @@ Use the [Remotion SaaS skill](remotion-saas/REFERENCE.md) for knowledge about Re
 
 To find and read current Remotion documentation, load [Remotion Docs](remotion-docs/REFERENCE.md).
 
+## Upgrading
+
+To upgrade Remotion, related packages, compatible Mediabunny packages, and installed Remotion Agent Skills, load [Remotion Upgrade](remotion-upgrade/REFERENCE.md).
+
 
 ## Codex troubleshooting
 

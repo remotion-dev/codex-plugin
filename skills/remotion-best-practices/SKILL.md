@@ -1,10 +1,12 @@
 ---
 name: remotion-best-practices
 description: Router for all Remotion skills
-version: 4.0.503
-metadata:
-  tags: remotion, video, react, animation, composition
+version: 4.0.504
 ---
+
+## Creating a video
+
+If the user asks to make, create, or build a new video or composition, load [Create a new Remotion video](./remotion-create/REFERENCE.md), whether or not a Remotion project already exists.
 
 ## New project setup
 
@@ -49,10 +51,10 @@ To upgrade Remotion, related packages, compatible Mediabunny packages, and insta
 
 ## Codex troubleshooting
 
-When running inside Codex, first try starting the Remotion Studio normally:
+When running inside Codex, first try starting the Remotion Studio without opening the system browser:
 
 ```bash
-npx remotion studio
+npx remotion studio --no-open
 ```
 
 Only if that fails with file watcher limits such as `EMFILE: too many open files, watch`, retry with polling and without opening a browser from Codex:

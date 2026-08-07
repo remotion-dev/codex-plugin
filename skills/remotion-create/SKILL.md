@@ -1,7 +1,7 @@
 ---
 name: remotion-create
 description: Create a new Remotion video
-version: 4.0.506
+version: 4.0.507
 ---
 
 These are instructions for making a new Remotion project and composition.  
@@ -49,7 +49,7 @@ npx remotion studio --no-open
 
 This will start a long-running process and print the server URL for the preview.  
 If the server is already started, it will print the URL.
-Open the exact URL in the Codex in-app browser. If no browser tool is available yet, use `tool_search` for the in-app browser control tool, then navigate to the local URL.
+Open the exact URL in the agent client's available browser. If no browser tool is available, keep the preview server running and provide the URL to the user.
 You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
 
 ## Render the video

@@ -1,7 +1,7 @@
 ---
 name: remotion-best-practices
 description: Router for all Remotion skills
-version: 4.0.529
+version: 4.0.530
 ---
 
 ## Preserve user changes
@@ -34,13 +34,45 @@ For achieving multimedia tasks in the browser, such as trimming, cropping videos
 
 By structuring the Remotion markup well, we can allow users to interactively change things in the Studio and write back to code. If relevant: [Interactivity Best Practices](./remotion-interactivity/REFERENCE.md)
 
-## Rendering
+## Open the preview
 
-For advanced rendering beyond simple `npx remotion render`, see: [Rendering Best Practices](./remotion-render/REFERENCE.md)
+If the user asks to "make" a video, "create" a video, etc.
+Don't render the video by default unless they are very explicit. They want to instead see an interactive preview.
+After creating or updating the video, start the preview server by default:
 
-## Opening Remotion Studio
+Always pass `--no-open` so the system browser is not opened:
+
+```bash
+npx remotion studio --no-open
+```
+
+This will start a long-running process and print the server URL for the preview.  
+If the server is already started, it will print the URL.
+Open the exact URL in the Codex in-app browser. If the in-app browser is not available, keep the preview server running and provide the URL to the user.
+You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
+
+:::note
+The Studio supports WebMCP tools.
+:::
+
+### More options
 
 To launch a project in Remotion Studio, open its exact local URL, or configure Studio CLI flags, load [Remotion Studio](./remotion-studio/REFERENCE.md).
+
+## Render the video
+
+Only render if the user is very explicit in asking for it.  
+E.g. "Render the video", "Export", "Give me the MP4".
+
+The preview also has a more intuitive rendering interface, so consider using it instead of the command line for rendering.
+
+```
+npx remotion render
+```
+
+For more options, see [Rendering](./remotion-render/REFERENCE.md).
+
+For advanced rendering beyond simple `npx remotion render`, see: [Rendering Best Practices](./remotion-render/REFERENCE.md)
 
 ## Captions
 

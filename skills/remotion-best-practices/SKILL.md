@@ -1,7 +1,7 @@
 ---
 name: remotion-best-practices
 description: Router for all Remotion skills
-version: 4.0.531
+version: 4.0.532
 ---
 
 ## Preserve user changes
@@ -40,15 +40,15 @@ If the user asks to "make" a video, "create" a video, etc.
 Don't render the video by default unless they are very explicit. They want to instead see an interactive preview.
 As soon as the project can run, start Studio and open the preview in the browser before building or editing the composition. Keep it open while you work so the user can watch progress and steer.
 
-Always pass `--no-open` so the system browser is not opened:
+To start the preview server by default without opening the system browser, pass `--no-open`:
 
 ```bash
 npx remotion studio --no-open
 ```
 
-This will start a long-running process and print the server URL for the preview.  
+This will start a long-running process and print the server URL for the preview.
 If the server is already started, it will print the URL.
-Open the exact URL in the Codex in-app browser and verify that Studio loads. Once a composition exists, verify that its video preview loads. If the in-app browser is not available, keep the preview server running and provide the URL to the user.
+Open the exact URL in the Codex in-app browser. Verify that Studio loads. Once a composition exists, verify that its video preview loads. If the in-app browser is not available, keep the preview server running and provide the URL to the user.
 You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
 
 :::note
